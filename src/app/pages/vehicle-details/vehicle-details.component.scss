@@ -1,0 +1,85 @@
+.vehicle-page-details{
+    .my-vehicle {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #000000;
+    }
+
+    .vehical-details .card {
+        border-radius: 10px;
+    
+        .card-header {
+            background: linear-gradient(90deg, #7EA3D1 4.04%, #C1E8F7 100%), #0039CB;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    
+        .card-body {
+            padding: 0px;
+        }
+        
+        .vehical-info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .image {
+                display: flex;
+                align-items: center;
+                vertical-align: middle;
+            }
+
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            color: #000000;
+        }
+
+        .table-header {
+            display: flex;
+            justify-content: space-around;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+            text-align: right;
+            color: #000000;
+            background: #E7E7E7;
+        }
+    }
+}
+
+.add-vehicle{
+    .card-header {
+        background: linear-gradient(270deg, #D3AAD1 0%, #EAA1B9 89.44%), #FCB61F !important;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .card-header.addtovehicle {
+        border-radius: 0px 0px 10px 10px !important;
+    }
+
+    .add-vehical-list {
+        padding: 0px 15px;
+        label {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            color: #000000;
+        }
+        span {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            color: #808080;
+        }
+    }
+    .py-2.list-disply {
+        display: flex;
+        align-items: center;
+    }
+}
