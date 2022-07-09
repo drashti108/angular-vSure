@@ -16,3 +16,16 @@ html, body {
     // overflow: hidden;
     font-family: 'Poppins';
 }
+.vehical-details .mat-expansion-panel-body {
+    padding: 0 !important;
+}
+.vehical-details .mat-expansion-panel-header {
+    padding: 0;
+    width: 100%;
+}
+.vehical-details .mat-content{
+    display: unset;
+}
+.vehical-details .mat-expansion-panel-spacing {
+    margin: 0;
+}

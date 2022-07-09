@@ -10,6 +10,8 @@ export class SignupComponent implements OnInit {
 
   public contactForm: FormGroup;
   disabledSubmitButton: boolean = true;
+  passwordShow:boolean = false
+  confirmPasswordShow:boolean = false
 
   constructor(private fb: FormBuilder) {
     this.contactForm = fb.group({
@@ -28,6 +30,14 @@ export class SignupComponent implements OnInit {
   onSubmit() {
     console.log("this.contactForm",this.contactForm.value);
     
+  }
+
+  handleConfirmPassShow() {
+    this.confirmPasswordShow = !this.confirmPasswordShow
+  }
+
+  handlePassShow() {
+    this.passwordShow = !this.passwordShow 
   }
 
 

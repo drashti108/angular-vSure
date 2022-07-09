@@ -9,6 +9,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class SigninComponent implements OnInit {
   public contactForm: FormGroup;
   disabledSubmitButton: boolean = true;
+  passwordShow:boolean = false
 
   constructor(private fb: FormBuilder) {
     this.contactForm = fb.group({
@@ -23,6 +24,10 @@ export class SigninComponent implements OnInit {
   onSubmit() {
     console.log("this.contactForm",this.contactForm.value);
     
+  }
+
+  handlePassShow() {
+    this.passwordShow = !this.passwordShow 
   }
 
 }

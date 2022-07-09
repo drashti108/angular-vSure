@@ -2,55 +2,81 @@
 <div class="vehicle-page-details">
     <div class="my-vehicle py-3">My Vehicles</div>
     <div class="vehical-details p-3">
-        <div class="card">
-            <div class="card-header">Vehicle Details</div>
-            <div class="card-body">
-                <div class="vehical-list">
-                    <div class="table-header mb-2 p-1">
-                        <div class="">Types</div>
-                        <div class="">Vehicles No</div>
-                        <div class="">Make</div>
+        <mat-accordion class="example-headers-align">
+            <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+                <mat-expansion-panel-header>
+                    <div class="card">
+                        <div class="card-header">Vehicle Details</div>
                     </div>
-                    <div *ngFor="let vehical of vehicalList; let i = index;">
-                        <div class="col-12 vehical-info py-2">
-                            <div class="image pr-2">
-                                <img *ngIf="vehical.type == '4 wheeler (MH46XY5300)'" src="../../../assets/svg/car-image.svg" style="width: 50px; height: 15px;" class="image-part mx-auto d-block" alt="Responsive image">
-                                <img *ngIf="vehical.type == '2 wheeler (MH46XY5300)'" src="../../../assets/svg/bike-image.svg" style="width: 50px; height: 15px;" class="image-part mx-auto d-block" alt="Responsive image">
+                </mat-expansion-panel-header>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="vehical-list">
+                            <div class="table-header mb-2 p-1">
+                                <div class="">Types</div>
+                                <div class="">Vehicles No</div>
+                                <div class="">Make</div>
                             </div>
-                            <div class="number">{{vehical.rNumber}}</div>
-                            <div class="make">{{vehical.make}}</div>
+                            <div *ngFor="let vehical of vehicalList; let i = index;">
+                                <div class="col-12 vehical-info py-2">
+                                    <div class="image pr-2">
+                                        <img *ngIf="vehical.type == '4 wheeler (MH46XY5300)'" src="../../../assets/svg/car-image.svg" style="width: 50px; height: 15px;" class="image-part mx-auto d-block" alt="Responsive image">
+                                        <img *ngIf="vehical.type == '2 wheeler (MH46XY5300)'" src="../../../assets/svg/bike-image.svg" style="width: 50px; height: 15px;" class="image-part mx-auto d-block" alt="Responsive image">
+                                    </div>
+                                    <div class="number">{{vehical.rNumber}}</div>
+                                    <div class="make">{{vehical.make}}</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="card add-vehicle">
-            <div class="card-header">Add Vehicle</div>
-            <div class="card-body">
-                <div class="add-vehical-list">
-                    <div class="py-2 list-disply">
+            </mat-expansion-panel>
 
-                        
-                    <label>Vehicle Type :</label>
-                    <div class="custom-control custom-radio">
-                        <div>
-                            <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios" mdbInput>
-                            <label class="custom-control-label" for="defaultUnchecked"><span class="custom">2 wheeler</span></label>
-                            <input type="radio" class="custom-control-input secoind-all" id="defaultUnchecked" name="defaultExampleRadios" mdbInput>
-                            <label class="custom-control-label" for="defaultUnchecked"><span class="custom">4 wheeler</span></label>
+            <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+                <mat-expansion-panel-header>
+                    <div class="card">
+                        <div class="card-header">Add Vehicle</div>
+                    </div>
+                </mat-expansion-panel-header>
+                <div class="card add-vehicle">
+                    <div class="card-body">
+                        <div class="add-vehical-list">
+                            <div class="py-2 list-disply">
+                                <label>Vehicle Type :</label>
+                                <div class="custom-control custom-radio">
+                                    <div>
+                                        <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios" mdbInput>
+                                        <label class="custom-control-label" for="defaultUnchecked"><span class="custom">2 wheeler</span></label>
+                                        <input type="radio" class="custom-control-input secoind-all" id="defaultUnchecked" name="defaultExampleRadios" mdbInput>
+                                        <label class="custom-control-label" for="defaultUnchecked"><span class="custom">4 wheeler</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-bottom"></div>
+                            <div class="py-2"><label>Policy :</label></div>
+                            <div class="border-bottom"></div>
+                            <div class="py-2"><label>Pincode :</label> <span class="px-2">400 001</span></div>
+                            <div class="border-bottom"></div>
+                            <div class="py-2"><label>RC No. :</label></div>
                         </div>
-
+                        <div class="card-header addtovehicle" (click)="basicModal.show()">Add To My Vehicle</div>
                     </div>
-                    </div>
-                    <div class="border-bottom"></div>
-                    <div class="py-2"><label>Policy :</label></div>
-                    <div class="border-bottom"></div>
-                    <div class="py-2"><label>Pincode :</label> <span class="px-2">400 001</span></div>
-                    <div class="border-bottom"></div>
-                    <div class="py-2"><label>RC No. :</label></div>
                 </div>
-                <div class="card-header addtovehicle">Add To My Vehicle</div>
-            </div>
-        </div>
+            </mat-expansion-panel>
+        </mat-accordion>
     </div>
 </div>
+
+<div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content added-success">
+        <div class="modal-body">
+            Vehicle added successfully!
+        </div>
+        <div class="modal-footer">
+          <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Close</button>
+          <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Save!</button>
+        </div>
+      </div>
+    </div>
+  </div>

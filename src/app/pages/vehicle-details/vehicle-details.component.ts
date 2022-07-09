@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VehicleDetailsComponent implements OnInit {
   vehicalList:any;
-
+  step = 0;
+  
   constructor() { }
 
   ngOnInit(): void {
@@ -33,6 +34,10 @@ export class VehicleDetailsComponent implements OnInit {
         make:"Honda",
       }
     ]
+  }
+
+  setStep(index: number) {
+    this.step = index;
   }
 
 }

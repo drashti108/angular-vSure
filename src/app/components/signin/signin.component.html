@@ -11,7 +11,7 @@
         <div class="pass-demo">
           <input type="password" formControlName="contactFormPassword" id="defaultContactFormPassword" mdbInput
             class="form-control mb-4" placeholder="Password">
-            <i class="fa fa-eye-slash password-hidden" aria-hidden="true"></i>
+            <i [ngClass]="passwordShow ? 'fa fa-eye eye-icon' : 'fa fa-eye-slash eye-icon password-hidden'" aria-hidden="true"  (click)="handlePassShow()"></i>
         </div>
       <div class="forgot-pass-text">forgot password?</div>
     </div>
