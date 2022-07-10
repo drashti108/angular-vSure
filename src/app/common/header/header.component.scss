@@ -1,7 +1,7 @@
 .sidebar-page{
   font-family: 'Inter';
-font-style: normal;
-font-size: 14px;
+  font-style: normal;
+  font-size: 14px;
 }
 .header-page{
     background: #0000B5;
@@ -25,8 +25,8 @@ mat-toolbar {
     border-right: none;
     background: #fff;
     color: #000;
-    border-radius: 10px;
     text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
   
   .content {
@@ -82,19 +82,22 @@ mat-toolbar {
 
   .sidebar-container{
     position: absolute;
-    z-index: 99;
     width: 100%;
+    // top: 0;
   }
 
 .sidebar-profile {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 15px 10px;
+    padding: 25px 10px;
     .image img{
       border-radius: 50% !important;
     }
-
+    .fa-close{
+      font-size: 20px;
+      margin-top: 4px;
+    }
     .profile-text{
       align-items: center;
       display: flex;
@@ -111,4 +114,28 @@ mat-toolbar {
     margin: 0 5px;
     color: #000;
     }
+}
+
+.sidebar-menu-item-list{
+  text-align: start;
+  .menu-item {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    padding: 10px 0 10px 25px;
+    border-top: 0.917234px solid #E7E7E7;
+  }
+  .menu-item.active {
+    background: #0000B5;
+    color: #FDBF20 !important;
+  }
+}
+.image-list{
+  display: flex;
+  background: #0000B5;
+  padding: 10px 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
