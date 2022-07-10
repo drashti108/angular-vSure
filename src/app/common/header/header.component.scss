@@ -83,8 +83,12 @@ mat-toolbar {
   .sidebar-container{
     position: absolute;
     width: 100%;
-    // top: 0;
+    z-index: 0;
   }
+
+  .sidebar-container.active {
+    z-index: 10;
+  }  
 
 .sidebar-profile {
     display: flex;

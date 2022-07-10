@@ -29,3 +29,6 @@ html, body {
 .vehical-details .mat-expansion-panel-spacing {
     margin: 0;
 }
+.cdk-overlay-container .mat-dialog-container {
+    padding: 0 !important;
+}

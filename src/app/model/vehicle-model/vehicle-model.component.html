@@ -1,0 +1,33 @@
+<div class="vehicle-model">
+  <div class="card">
+    <div class="card-header">
+        <img
+          src="../../../assets/svg/back-arrow.svg"
+          class="image-part d-block back-icon"
+          alt="Responsive image"
+        />
+        <span>{{ vehicle?.rNumber }}</span>
+        <img
+            src="../../../assets/svg/delete-icon.svg"
+            class="image-part d-block delete-icon"
+            alt="Responsive image"
+            />
+    </div>
+    <div class="card-body">
+      <div class="register py-1"> Registration number : 4W234234234 </div>
+      <div class="register py-1"> Vehicle Type : 4 wheeler   Make : Honda </div>
+      <div class="register py-1"> Model : Accord Hybrid   Years : 2021 </div>
+      <div class="register py-1"> Variant : Petrol   Fuel Type : Petrol </div>
+      <div class="register py-1"> Policy Details : NA </div>
+      <div class="address py-1"> Address : <span class="address-text">Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Mumbai - 400 001</span> </div>
+    </div>
+    <div class="card-footer">
+      <!-- <button mat-button [mat-dialog-close]=" vehicle?.rNumber" cdkFocusInitial>Ok</button> -->
+        <button class="buy-plan">Buy Plans</button>
+        <button class="goto-service">Go to Services</button>
+    </div>
+  </div>
+  <!-- <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">No Thanks</button>
+        </div>  -->
+</div>

@@ -11,7 +11,7 @@
 </div>
 <div class="sidebar-page">
     
-    <mat-sidenav-container class="sidebar-container">
+    <mat-sidenav-container class="sidebar-container" [class.active]="sidenav.opened">
       <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
         <div class="sidebar-profile">
           <div class="image">

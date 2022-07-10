@@ -18,7 +18,7 @@
                                 <div class="">Make</div>
                             </div>
                             <div *ngFor="let vehical of vehicalList; let i = index;">
-                                <div class="col-12 vehical-info py-2">
+                                <div class="col-12 vehical-info py-2" (click)="openVehicleDialog(vehical)">
                                     <div class="image pr-2">
                                         <img *ngIf="vehical.type == '4 wheeler (MH46XY5300)'" src="../../../assets/svg/car-image.svg" style="width: 50px; height: 15px;" class="image-part mx-auto d-block" alt="Responsive image">
                                         <img *ngIf="vehical.type == '2 wheeler (MH46XY5300)'" src="../../../assets/svg/bike-image.svg" style="width: 50px; height: 15px;" class="image-part mx-auto d-block" alt="Responsive image">
@@ -74,8 +74,8 @@
                 Vehicle added successfully! 
             </div>
             <div class="modal-footer">
-                <button type="button" mdbBtn aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Buy Plans</button>
-                <button type="button" mdbBtn mdbWavesEffect>Services</button>
+                <button class="buy-plan" (click)="basicModal.hide()">Buy Plans</button>
+                <button class="goto-service"  (click)="basicModal.hide(); openServiceDialog()">Go to Services</button>
             </div>
       </div>
     </div>

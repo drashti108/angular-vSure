@@ -1,0 +1,87 @@
+.service-request-model{
+    font-family: 'Inter';
+    width: 300px;
+    .card{
+        border-radius: 10px;
+    }
+    .card-header {
+        background: linear-gradient(90deg, #9392C6 4.04%, #E2E2F7 100%), linear-gradient(90deg, #7EA3D1 4.04%, #C1E8F7 100%), #0039CB;
+        border-radius: 10px 10px 0px 0px;
+        text-align: center;
+        display: flex;
+        width: 100%;
+        padding: 10px 0px;
+        align-items: center;
+        justify-content: space-between;
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;   
+        
+        .back-icon{
+            padding-left: 10px;
+        }
+        .delete-icon{
+            padding-right: 10px;
+        }
+    }
+    .card-body {
+        padding: 10px;
+        font-weight: 700;
+        font-size: 12px;
+        color: #000000;
+
+        .address{
+            .address-text{
+                color: #AAACAF;
+            }
+        }
+        .header-ser{
+            font-weight: 400;
+            font-size: 12px;
+            color: #000000;
+        }
+        .radio-group.select{
+            padding-bottom: 15px !important;
+        }
+        .emergncy-header {
+            display: flex;
+            justify-content: start;
+            select {
+                background: no-repeat;
+                border: none;
+                color: #AAACAF;
+                font-weight: 700;
+            }
+        }
+    }
+    .card-footer {
+        padding: 0;
+
+        button {
+            background: #AAACAF;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            font-weight: 600;
+            font-size: 13px;
+            border-radius: 0 0 10px 10px;
+        }
+    } 
+}
+.cdk-overlay-container .mat-dialog-container {
+    padding: 0 !important;
+}
+@media screen and (max-width:380px) {
+    .service-request-model{
+        width: 280px;
+    }
+}
+@media (max-width:340px) {
+    .service-request-model{
+        width: 260px;
+    }
+}

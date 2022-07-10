@@ -100,12 +100,27 @@
         padding: 24px 0px;
     }
     .modal-footer {
-        display: flex;
-        justify-content: space-around;
-        background: #E5E5E5;
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-    }
+        padding: 0;
+
+        button {
+            background: #E5E5E5;
+            border: none;
+            padding: 10px;
+            text-align: center;
+            width: 50%;
+            font-weight: 700;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .buy-plan{
+            border-right: 2px solid #FFFFFF;
+            border-radius: 0 0 0 10px;
+        }
+        .goto-service{
+            border-radius: 0 0 10px 0;
+        }
+    } 
     .modal-footer button.btn {
         padding: 0;
         margin: 0;

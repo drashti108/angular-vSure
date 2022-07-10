@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,8 +20,13 @@ import { MatDividerModule } from '@angular/material/divider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatExpansionModule} from '@angular/material/expansion';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatDialogModule} from '@angular/material/dialog';
+import { VehicleModelComponent } from './model/vehicle-model/vehicle-model.component';
+import { ServiceRequestComponent } from './model/service-request/service-request.component';
+import { GoogleMapsComponent } from './pages/google-maps/google-maps.component';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -31,6 +36,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     DashboardComponent,
     HeaderComponent,
     VehicleDetailsComponent,
+    VehicleModelComponent,
+    ServiceRequestComponent,
+    GoogleMapsComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,9 +54,18 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatDividerModule,
     MatSnackBarModule,
     MatExpansionModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    HttpClientModule,
+    HttpClientJsonpModule,
+    GoogleMapsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [ VehicleModelComponent ],
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  exports: [
+    GoogleMapsComponent,
+  ],
 })
 export class AppModule { }

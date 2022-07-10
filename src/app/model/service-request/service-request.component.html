@@ -1,0 +1,47 @@
+<div class="service-request-model">
+    <div class="card">
+      <div class="card-header">
+          <img
+            src="../../../assets/svg/back-arrow.svg"
+            class="image-part d-block back-icon"
+            alt="Responsive image"
+          />
+          <span>Service Request Assistance</span>
+          <div></div>
+      </div>
+      <div class="card-body">
+        <div class="text-center py-1 header-ser" *ngIf="!isSelect"> Please select your type of service </div>
+        <div class="radio-group text-center py-2" [class.select]="isSelect">
+            <div class="custom-control custom-radio custom-control-inline text-center">
+                <input type="radio" class="custom-control-input" id="defaultInline1" name="radioName" mdbInput value="Emergency" (change)="handleType($event)">
+                <label class="custom-control-label" for="defaultInline1">Emergency</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline text-center">
+                <input type="radio" class="custom-control-input" id="defaultInline2" name="radioName" value="Non-Emergency" mdbInput (change)="handleType($event)">
+                <label class="custom-control-label" for="defaultInline2">Non-Emergency</label>
+            </div>
+        </div>
+
+        <div *ngIf="isEmergency">
+            <div class="emergncy-header">
+                <div class="label-type">Select Breakdown Type : </div>
+                <select>
+                    <option>Select</option>
+                    <option>Vehicle not</option>
+                </select>
+            </div>
+            <div class="vehicle-google-map">
+                <div *ngIf="apiLoaded | async">
+                    <!-- <google-map></google-map> -->
+                    <app-google-maps></app-google-maps>
+                </div>
+            </div>
+        </div>
+
+      </div>
+      <div class="card-footer">
+          <button class="send">Send</button>
+      </div>
+    </div>
+  </div>
+  
