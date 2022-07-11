@@ -9,7 +9,7 @@
         placeholder="Enter email or user name">
     
         <div class="pass-demo">
-          <input type="password" formControlName="contactFormPassword" id="defaultContactFormPassword" mdbInput
+          <input [type]="passwordShow ? 'text' : 'password'" formControlName="contactFormPassword" id="defaultContactFormPassword" mdbInput
             class="form-control mb-4" placeholder="Password">
             <i [ngClass]="passwordShow ? 'fa fa-eye eye-icon' : 'fa fa-eye-slash eye-icon password-hidden'" aria-hidden="true"  (click)="handlePassShow()"></i>
         </div>

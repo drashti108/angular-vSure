@@ -13,9 +13,9 @@
                     <div class="card-body">
                         <div class="vehical-list">
                             <div class="table-header mb-2 p-1">
-                                <div class="">Types</div>
+                                <div class="type pl-3">Types</div>
                                 <div class="">Vehicles No</div>
-                                <div class="">Make</div>
+                                <div class="make pr-3">Make</div>
                             </div>
                             <div *ngFor="let vehical of vehicalList; let i = index;">
                                 <div class="col-12 vehical-info py-2" (click)="openVehicleDialog(vehical)">
@@ -44,16 +44,28 @@
                             <div class="py-2 list-disply">
                                 <label>Vehicle Type :</label>
                                 <div class="custom-control custom-radio">
-                                    <div>
+                                    <div class="radio-one">
                                         <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios" mdbInput>
                                         <label class="custom-control-label" for="defaultUnchecked"><span class="custom">2 wheeler</span></label>
+                                    </div>
+                                    <div class="radio-two">
                                         <input type="radio" class="custom-control-input secoind-all" id="defaultUnchecked" name="defaultExampleRadios" mdbInput>
                                         <label class="custom-control-label" for="defaultUnchecked"><span class="custom">4 wheeler</span></label>
                                     </div>
                                 </div>
                             </div>
                             <div class="border-bottom"></div>
+                            <div class="py-2"><label>Make  :</label> <span class="px-2">Honda</span></div>
+                            <div class="border-bottom"></div>
+                            <div class="py-2"><label>Model  :</label> <span class="px-2">Accord Hybrid</span></div>
+                            <div class="border-bottom"></div>
+                            <div class="py-2"><label>Variant :</label> <span class="px-2">2Z</span></div>
+                            <div class="border-bottom"></div>
+                            <div class="py-2"><label>Fuel Type :</label> <span class="px-2">Petrol</span></div>
+                            <div class="border-bottom"></div>
                             <div class="py-2"><label>Policy :</label></div>
+                            <div class="border-bottom"></div>
+                            <div class="py-2"><label>Address :</label> <span class="px-2"></span></div>
                             <div class="border-bottom"></div>
                             <div class="py-2"><label>Pincode :</label> <span class="px-2">400 001</span></div>
                             <div class="border-bottom"></div>

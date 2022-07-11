@@ -24,7 +24,7 @@
     <div class="card-footer">
       <!-- <button mat-button [mat-dialog-close]=" vehicle?.rNumber" cdkFocusInitial>Ok</button> -->
         <button class="buy-plan">Buy Plans</button>
-        <button class="goto-service">Go to Services</button>
+        <button class="goto-service" (click)="dialogRef.close(); openServiceDialog()">Go to Services</button>
     </div>
   </div>
   <!-- <div mat-dialog-actions>

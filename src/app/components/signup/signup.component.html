@@ -23,13 +23,13 @@
           placeholder="Mobile">
       
         <div class="pass-demo">
-            <input type="password" formControlName="password" id="defaultpassword" mdbInput
+            <input [type]="passwordShow ? 'text' : 'password'" formControlName="password" id="defaultpassword" mdbInput
             class="form-control mb-3" placeholder="Password">
               <i [ngClass]="passwordShow ? 'fa fa-eye eye-icon' : 'fa fa-eye-slash eye-icon password-hidden'" aria-hidden="true"  (click)="handlePassShow()"></i>
           </div>
 
           <div class="pass-demo">
-            <input type="password" formControlName="confirmPassword" id="defaultconfirmPassword" mdbInput
+            <input [type]="confirmPasswordShow ? 'text' : 'password'" formControlName="confirmPassword" id="defaultconfirmPassword" mdbInput
             class="form-control mb-3" placeholder="Confirm Password"> 
              <i [ngClass]="confirmPasswordShow ? 'fa fa-eye eye-icon' : 'fa fa-eye-slash eye-icon password-hidden'" aria-hidden="true" (click)="handleConfirmPassShow()"></i>
           </div>
