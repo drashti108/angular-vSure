@@ -10,15 +10,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GoogleMapsComponent implements OnInit {
 
-  center: google.maps.LatLngLiteral = {lat: 24, lng: 12};
+  center: any = {lat: 24, lng: 12};
   zoom = 4;
   display:any;
 
-  moveMap(event: google.maps.MapMouseEvent) {
+  moveMap(event: any) {
     this.center = (event.latLng.toJSON());
   }
 
-  move(event: google.maps.MapMouseEvent) {
+  move(event: any) {
     this.display = event.latLng.toJSON();
   }
 

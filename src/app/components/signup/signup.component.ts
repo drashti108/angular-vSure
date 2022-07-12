@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -8,12 +8,12 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
 
-  public contactForm: FormGroup;
+  public contactForm: UntypedFormGroup;
   disabledSubmitButton: boolean = true;
   passwordShow:boolean = false
   confirmPasswordShow:boolean = false
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: UntypedFormBuilder) {
     this.contactForm = fb.group({
       'firstName': ['', Validators.required],
       'lastName': ['', Validators.required],

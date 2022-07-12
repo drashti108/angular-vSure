@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signin',
@@ -7,11 +7,11 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
-  public contactForm: FormGroup;
+  public contactForm: UntypedFormGroup;
   disabledSubmitButton: boolean = true;
   passwordShow:boolean = false
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: UntypedFormBuilder) {
     this.contactForm = fb.group({
       'contactFormName': ['', Validators.required],
       'contactFormPassword': ['', Validators.compose([Validators.required, Validators.email])],
