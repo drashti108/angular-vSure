@@ -24,6 +24,8 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       .observe(['(max-width: 800px)'])
       .pipe(delay(1), untilDestroyed(this))
       .subscribe((res) => {
+        console.log("res--",res);
+        
         if (res.matches) {
           this.sidenav.mode = 'over';
           this.sidenav.close();
@@ -38,7 +40,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
         untilDestroyed(this),
         filter((e) => e instanceof NavigationEnd)
       )
-      .subscribe(() => {
+      .subscribe((data) => {
+        console.log("data--",data);
+        
         if (this.sidenav.mode === 'over') {
           this.sidenav.close();
         }

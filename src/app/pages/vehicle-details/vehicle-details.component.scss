@@ -7,11 +7,26 @@
         color: #000000;
     }
 
+    .card{
+        .header-icon {
+            position: absolute;
+            right: 5%;
+            top: 21%;
+            font-size: 19px;
+            color: #fff;
+        }
+    }
+
     .vehical-details .card {
         border-radius: 10px;
     
-        .card-header {
+        .card-header.active {
             background: linear-gradient(90deg, #7EA3D1 4.04%, #C1E8F7 100%), #0039CB;
+        }
+        .card-header.hide {
+            background: #AAACAF;
+        }
+        .card-header {
             font-weight: 700;
             font-size: 16px;
             line-height: 19px;

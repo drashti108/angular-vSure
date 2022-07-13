@@ -3,10 +3,11 @@
     <div class="my-vehicle py-3">My Vehicles</div>
     <div class="vehical-details p-3">
         <mat-accordion class="example-headers-align">
-            <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+            <mat-expansion-panel [expanded]="step === 0"  (opened)="headerClickOpen(0); setStep(0)" hideToggle (closed)="headerClickClose(0)">
                 <mat-expansion-panel-header>
                     <div class="card">
-                        <div class="card-header">Vehicle Details</div>
+                        <div [ngClass]="detailOpen ? 'card-header active' : 'card-header hide'">Vehicle Details</div>
+                        <div class="header-icon"><i [ngClass]="detailOpen ? 'fa-solid fa-angle-down' : 'fa-solid fa-angle-up'"></i></div>
                     </div>
                 </mat-expansion-panel-header>
                 <div class="card">
@@ -32,10 +33,11 @@
                 </div>
             </mat-expansion-panel>
 
-            <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+            <mat-expansion-panel [expanded]="step === 1" (opened)="headerClickOpen(1); setStep(1)" hideToggle (closed)="headerClickClose(1)">
                 <mat-expansion-panel-header>
                     <div class="card">
-                        <div class="card-header">Add Vehicle</div>
+                        <div  [ngClass]="vehicleOpen ? 'card-header active' : 'card-header hide'"><i class="fa fa-plus" aria-hidden="true" style="font-size:14px;"></i> Add Vehicle</div>
+                        <div class="header-icon"><i [ngClass]="vehicleOpen ? 'fa-solid fa-angle-down' : 'fa-solid fa-angle-up'"></i></div>
                     </div>
                 </mat-expansion-panel-header>
                 <div class="card add-vehicle">
