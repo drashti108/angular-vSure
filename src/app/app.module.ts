@@ -27,6 +27,10 @@ import { ServiceRequestComponent } from './model/service-request/service-request
 import { GoogleMapsComponent } from './pages/google-maps/google-maps.component';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { MatRadioModule } from '@angular/material/radio';
+import { CommonMessageComponent } from './model/common-message/common-message.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
     declarations: [
@@ -39,6 +43,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
         VehicleModelComponent,
         ServiceRequestComponent,
         GoogleMapsComponent,
+        CommonMessageComponent,
     ],
     imports: [
         BrowserModule,
@@ -58,7 +63,10 @@ import { GoogleMapsModule } from '@angular/google-maps';
         MatFormFieldModule,
         HttpClientModule,
         HttpClientJsonpModule,
-        GoogleMapsModule
+        GoogleMapsModule,
+        MatRadioModule,
+        MatDatepickerModule,
+        MatNativeDateModule
     ],
     providers: [],
     bootstrap: [AppComponent],

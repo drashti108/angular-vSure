@@ -85,7 +85,7 @@
             font-size: 12px;
             line-height: 15px;
             color: #000000;
-            // width: 30%;
+            margin-bottom: 0;
         }
         span {
             font-weight: 700;
@@ -99,6 +99,27 @@
             display: flex;
             justify-content: space-around;
         }
+        select.browser-default.custom-select {
+            border: none;
+            padding: 0 0 0 7px;
+            height: auto;
+            width: 60%;
+            background: #fff url("../../../assets/svg/angle-down.svg") right 0.75rem center/11px 10px no-repeat;
+            outline: none;
+            font-weight: 700;
+            font-size: 13px;
+            color: #808080;
+        }
+        .custom-select:focus {
+            box-shadow: none;
+        }
+        .main-menu{
+            width: 100%;
+
+            .sub-menu{
+                width: 50%;
+            }
+        }
     }
     .py-2.list-disply {
         display: flex;
@@ -109,49 +130,8 @@
 .vehical-details .mat-expansion-panel-body {
     padding: 0 !important;
 }
-.modal-content.added-success {
-    background: #FFFFFF;
-    border-radius: 10px;
-
-    .modal-body {
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 17px;
-        text-align: center;
-        color: #000000;
-        padding: 24px 0px;
-    }
-    .modal-footer {
-        padding: 0;
-
-        button {
-            background: #E5E5E5;
-            border: none;
-            padding: 10px;
-            text-align: center;
-            width: 50%;
-            font-weight: 700;
-            font-size: 13px;
-            margin: 0;
-        }
-
-        .buy-plan{
-            border-right: 2px solid #FFFFFF;
-            border-radius: 0 0 0 10px;
-        }
-        .goto-service{
-            border-radius: 0 0 10px 0;
-        }
-    } 
-    .modal-footer button.btn {
-        padding: 0;
-        margin: 0;
-        box-shadow: none;
-        font-weight: 700;
-        font-size: 13px;
-        line-height: 19px;
-        text-align: center;
-        color: #000000;
-        text-transform: initial;
+@media (max-width:350px) {
+    .vehicle-type{
+        width: 20%;
     }
 }

@@ -6,7 +6,7 @@
             class="image-part d-block back-icon"
             alt="Responsive image"
           />
-          <span>Service Request Assistance</span>
+          <span>Request Service/Assistance</span>
           <div></div>
       </div>
       <div class="card-body">
@@ -24,12 +24,19 @@
 
         <div *ngIf="isEmergency">
             <div class="emergncy-header">
-                <div class="label-type">Select Breakdown Type : </div>
-                <select>
-                    <option>Select</option>
-                    <option>Vehicle not</option>
+                <div class="label-type" style="width: 100%;">Select Breakdown Type : </div>
+
+                <select class="browser-default custom-select" (change)="getValue($event)">
+                    <option *ngFor="let cat of optionsSelect" [value]="cat.label" >
+                        {{cat.label}}
+                    </option>
                 </select>
             </div>
+            <div *ngIf="isSelectVal == 'Other'"> 
+                <div style="font-weight: 400;">Please please describe about your issue</div>
+                <textarea class="textarea-map" rows="3" ></textarea>
+            </div>
+            <div style="font-weight: 400;">Select your current location</div>
             <div class="vehicle-google-map">
                 <div *ngIf="apiLoaded | async">
                     <!-- <google-map></google-map> -->
@@ -40,8 +47,17 @@
 
       </div>
       <div class="card-footer">
-          <button class="send">Send</button>
+          <button class="send"  (click)="commonMessageShow()">Send</button>
       </div>
     </div>
-  </div>
-  
+</div>
+
+<div mdbModal #finalAdd="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myfinalAddLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content added-success">
+            <div class="modal-body">
+                Your request has been successfully registered; You will receive a call back from our Assistance Centre.
+            </div>
+      </div>
+    </div>
+</div>

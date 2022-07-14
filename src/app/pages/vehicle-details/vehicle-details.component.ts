@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { CommonMessageComponent } from 'src/app/model/common-message/common-message.component';
 import { ServiceRequestComponent } from 'src/app/model/service-request/service-request.component';
 import { VehicleModelComponent } from 'src/app/model/vehicle-model/vehicle-model.component';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-vehicle-details',
@@ -15,6 +17,11 @@ export class VehicleDetailsComponent implements OnInit {
   color: string = "";
   detailOpen: boolean = false
   vehicleOpen: boolean = false
+
+  dateRange = new FormGroup({
+    start: new FormControl(),
+    end: new FormControl()
+  });
 
   @Input()
   hideToggle: boolean = false;
@@ -68,16 +75,18 @@ export class VehicleDetailsComponent implements OnInit {
 
   openVehicleDialog(vehicle:any) {
     const dialogRef = this.dialog.open(VehicleModelComponent, {
-      data: { vehicle:vehicle }
+      data: { vehicle:vehicle },
+      maxWidth: '100vw',
     });
     dialogRef.afterClosed().subscribe(res => {
       this.color = res;
     });
   }
 
-  openServiceDialog(){
-    const dialogRef = this.dialog.open(ServiceRequestComponent, {
-      // data: { vehicle:vehicle }
+  commonMessageShow(){
+    const dialogRef = this.dialog.open(CommonMessageComponent, {
+      data: { message:'Vehicle added successfully!', button:true, component:'service' },
+      maxWidth: '100vw',
     });
     dialogRef.afterClosed().subscribe(res => {
     });
