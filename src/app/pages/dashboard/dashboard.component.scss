@@ -134,3 +134,17 @@
         color: #FFFFFF;
     }
 }
+@media (max-width: 360px) {
+    span.model, .registration, .model, .color, .fuel {
+        font-size: 11px !important;
+    }
+    img.image-part{
+        width: 50px !important;
+    }
+    .card-body {
+        padding: 10px !important;
+    }
+    .recent-claim-details .card {
+        font-size: 11px !important;
+    }
+}

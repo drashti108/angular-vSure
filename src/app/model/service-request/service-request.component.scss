@@ -32,8 +32,10 @@
         font-weight: 700;
         font-size: 12px;
         color: #000000;
+        max-height: 400px;
+        overflow-y: scroll;
 
-        .address{
+            .address{
             .address-text{
                 color: #AAACAF;
             }

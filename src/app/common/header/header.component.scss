@@ -124,3 +124,10 @@
       bottom: 0;
     }
 }
+@media (max-width: 360px) {
+  .sidebar-menu-item-list{
+    .menu-item {
+      font-size: 12px !important;
+    }
+  }
+}
