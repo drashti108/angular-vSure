@@ -31,6 +31,10 @@ import { MatRadioModule } from '@angular/material/radio';
 import { CommonMessageComponent } from './model/common-message/common-message.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { SelectServiceComponent } from './pages/select-service/select-service.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { WelcomeComponent } from './common/welcome/welcome.component';
+import { ApprovedColorComponent } from './common/approved-color/approved-color.component';
 
 @NgModule({
     declarations: [
@@ -44,6 +48,9 @@ import { MatNativeDateModule } from '@angular/material/core';
         ServiceRequestComponent,
         GoogleMapsComponent,
         CommonMessageComponent,
+        SelectServiceComponent,
+        WelcomeComponent,
+        ApprovedColorComponent,
     ],
     imports: [
         BrowserModule,
@@ -66,7 +73,8 @@ import { MatNativeDateModule } from '@angular/material/core';
         GoogleMapsModule,
         MatRadioModule,
         MatDatepickerModule,
-        MatNativeDateModule
+        MatNativeDateModule,
+        MatGridListModule
     ],
     providers: [],
     bootstrap: [AppComponent],

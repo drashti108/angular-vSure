@@ -59,6 +59,9 @@
                 background: #FFF url(../../../assets/svg/angle-down.svg) right 30px center/11px 10px no-repeat;
                 outline: none;
                 height: auto;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             .custom-select:focus {
                 box-shadow: none;
@@ -86,6 +89,18 @@
             background: linear-gradient(270deg, #D3AAD1 0%, #EAA1B9 89.44%), #FCB61F;
         }
     } 
+    .input-pickup{
+        width: 100%;
+        padding: 3px;
+        background: #EAEAEA;
+        border: 1px solid #B0B0B0
+    }
+    .date-pickjer-doorstep{
+        align-items: center;
+    }
+    .custom-control-label{
+        line-height: 2;
+    }
 }
 .cdk-overlay-container .mat-dialog-container {
     padding: 0 !important;

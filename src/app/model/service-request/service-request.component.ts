@@ -16,6 +16,7 @@ export class ServiceRequestComponent implements OnInit {
   isSelectVal:string = "";
   apiLoaded: Observable<boolean>;
   optionsSelect: Array<any>;
+  locationText:any
 
   constructor(
     public dialogRef: MatDialogRef<ServiceRequestComponent>,
@@ -24,9 +25,10 @@ export class ServiceRequestComponent implements OnInit {
     httpClient: HttpClient
   ){
     this.optionsSelect = [
-      { value: '1', label: 'Transaction 1' },
-      { value: '2', label: 'Transaction 2' },
-      { value: '3', label: 'Transaction 3' },
+      { value: '0', label: 'Select' },
+      { value: '1', label: 'Vehicle not starting Flat Tyre Empty Fuel tank Key Lost/Locked Other' },
+      { value: '2', label: 'Pick up & Drop' },
+      { value: '3', label: 'Doorstep Service' },
       { value: '4', label: 'Other' },
     ]
     this.apiLoaded = httpClient.jsonp('https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE', 'callback')

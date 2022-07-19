@@ -69,6 +69,13 @@
 }
 
 .add-vehicle{
+    .d-flex{
+        align-items: baseline;
+    }
+    .date-period{
+        padding: 0;
+        margin: -15px 0;
+    }
     .card-header {
         background: linear-gradient(270deg, #D3AAD1 0%, #EAA1B9 89.44%), #FCB61F !important;
         border-radius: 10px 10px 0px 0px;
@@ -98,6 +105,9 @@
             width: 70%;
             display: flex;
             justify-content: space-around;
+            .custom{
+                line-height: 2;
+            }
         }
         select.browser-default.custom-select {
             border: none;
